@@ -1,9 +1,33 @@
+const name= document.querySelector('#name')
+const email=document.querySelector('#e-mail')
+const mobile= document.querySelector('#mobile')
+const subject=document.querySelector('#subject')
+
+
+
 document.querySelector("#submit").addEventListener('click',Validate);
 function Validate(){
     
     ValidateName();
     ValidateMail();
     ValidateMobile();
+
+    if(name.style.borderColor==="green" && email.style.borderColor==="green" && mobile.style.borderColor==="green"){
+        console.log('form submitted succesfully')
+        swal({
+            title: "Form Validated",
+            text: "Form Submitted Succesfully",
+            icon: "success",
+            button: "Okay"
+        }).then(function() {
+            name.value="";
+            email.value="";
+            mobile.value="";
+            subject.value="";
+            document.location.reload();
+        });
+
+    }
     
 }
 
@@ -32,11 +56,11 @@ function checkError(id){
 
 }
 function ValidateName(){
-    const name=document.querySelector('#name');
+    //const name=document.querySelector('#name');
     const nameHead=document.querySelector('#name-head')
     if(name.value===""){
         alert("please fill All fields")
-
+        
     }else{
         const re=/^[a-zA-Z ]{2,10}$/;
         if(re.test(name.value)){
@@ -55,7 +79,7 @@ function ValidateName(){
 }
 
 function ValidateMail(){
-    const email=document.querySelector('#e-mail');
+    //const email=document.querySelector('#e-mail');
     const mailHead=document.querySelector('#mail-head');
     if(email.value===""){
         alert("please fill All fields")
@@ -79,7 +103,7 @@ function ValidateMail(){
 
 }
 function ValidateMobile(){
-    const mobile=document.querySelector('#mobile');
+    //const mobile=document.querySelector('#mobile');
     const mobileHead=document.querySelector('#mobile-head')
     
     if(mobile.value===""){
