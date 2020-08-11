@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    
+    <style>
+         *{
+    font-family: 'Nunito',sans-serif;
+    }
+    #info-card-1{
+        margin:auto
+    }
+    #info-card-2{
+        margin-right:0.7em;
+        width:23%;
+        margin-top:0.7em ;
+        margin-bottom: 0.7em;
+        
+    }
+    .total-deaths{
+        margin-left:1.8em;
+    }
+    .card-info{
+        text-align: center;
+    }
+    .value{
+        font-size:xx-large ;
+    }
+    
+    </style>
+    <title>COVID-19 Tracker</title>
+</head>
+<br>
+<body>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="card card-info" id="info-card-1">
+                <h2>Total Cases</h2>
+                <p class="value" id="total_cases"></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="card  card-info total-deaths" id="info-card-2">
+                <h2>Total Deaths</h2>
+                <p class="value" id="total_deaths"></p>
+            </div>
+            <div class="card  card-info" id="info-card-2">
+                <h2>Total Recovered</h2>
+                <p class="value" id="total_recovered"></p>
+            </div>
+            <div class="card  card-info" id="info-card-2">
+                <h2>Active Cases</h2>
+                <p class="value" id="active_cases"></p>
+            </div>
+            <div class="card  card-info" id="info-card-2">
+                <h2>Cases per Million</h2>
+                <p class="value" id="cases_per_million"></p>
+            </div>      
+        </div>
+        <div class="container searchContainer">
+            <div class="search card card-body">
+                <h3>Search Country</h3>
+                <p class='lead'>Enter a country to get details</p>
+                <input type='text' id='searchCountry' class='form-control'placeholder='Enter Country name'>
+            </div>
+            <br>
+        </div>
+        <table class="table "id="countries_stat">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Cases</th>
+                    <th>Deaths</th>
+                    <th>Active Cases</th>
+                    <th>Recoveries</th>
+                    <th>Tested</th>
+                    <th>Graphs</th>
+                </tr>
+            </thead>  
+         
+        </table>    
+        <!-- The Modal -->
+<div class="modal " id="countryModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <div class="modal " id="graphModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" id='graph-title'></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body" id='graph-body'>
+          
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+    <script src="app.js"></script>
+</body>
+</html>
