@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .card-container {
+            display: grid;
+            perspective: 700px;
+        }
+        .card-flip {
+            display: grid; grid-template: 1fr / 1fr;
+            grid-template-areas: "frontAndBack";
+            transform-style: preserve-3d;
+            transition: all 0.7s ease;
+        }
+
+        .front {
+            grid-area: frontAndBack;
+        }
+
+        .back {
+            grid-area: frontAndBack;
+            transform: rotateY(-180deg);
+        }
+                
+        .card-flip, .card-container {
+            transform-style: preserve-3d;
+            transition: all 0.7s ease;
+        }
+
+        .card-flip div {
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .back {
+            transform: rotateY(-180deg);
+        }
+        #sc-1{
+            background-color: #292B2C;
+            color: white;
+        }
+
+        .card-container:hover .card-flip {
+            transform: rotateY(180deg);
+        }
+        #c-1{
+            margin:6px;
+            
+            
+        }
+
+        .card-header{
+            background-color:#BBE1FA ;
+        }
+        #body{
+            background-color: #ffffff;
+
+        }
+        .row{
+            
+            padding: 10px;
+        }
+        #details{
+            margin:"auto";
+        }
+        #hhh{
+            font-size: 40px;
+            color: white;
+        }
+        .card-header{
+            background-color: #292B2C;
+
+        }
+        #sidebar{
+            font-size: 25px;
+            background-color: white;
+        }
+        #list-item{
+            font-size: 18px;
+        }
+        #details{
+            font-size: 17px;
+            
+        }
+        #list-item{
+            font-size:0.8em;
+        }
+        #sm{
+            font-size: 1em;
+            text-align: center;
+        }
+        #skills-Bar{
+            background-color: white;
+            font-size: 25px;
+            margin-left: 15px;
+        }
+        .badge{
+            color:white;
+            background-color:#292B2C ;
+        }
+    </style>
+    <title>Dhruv Jain</title>
+</head>
+<body id="body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class=col-md-3>
+            <div class="card " id="sidebar">
+                
+            <div class="card-header">
+            <div id="hhh"><span ><i style='Text-align:center' class="fa fa-fw fa-user"></i> </span>Profile</div>
+            </div>
+                <img src='IMG_6639.JPG' alt="my image" class="rounded-circle mx-auto d-block " height="250px" width="250px"id="image">
+                <strong><p style='Text-align:center'>Dhruv Jain</p></strong>
+                <p id="details" style='Text-align:center'>
+                    E-mail:-dhruvjain9029@gmail.com<br>
+                    College:-D.J Sanghvi<br>
+                    Branch:Computer Science<br>
+                    Mobile number:-9082273528
+                    <div class="card-title" id="sm">Social Media Profiles</div>
+                        <div id="sm">
+                            <span class="fa fa-linkedin" style="color:#0e76a8"></span>
+                            <a href="https://www.linkedin.com/in/dhruv-jain-20b874192/" > Linkedin</a>
+                        </div>
+                        <div id="sm">
+                            <span class="fab fa-hackerrank" style="color:#0aca2a"></span>
+                            <a href="https://www.hackerrank.com/dhruvjain9029" > Hackerank</a>
+                        </div>
+                        <div id="sm">
+                            <span class="fa fa-github"></span>
+                            <a href="https://github.com/soulsayer9029" >Github</a>
+                        </div>
+                        
+                    
+                    <strong style="align-self: center"><a href="contactMe.html"><span class=" badge" >Contact Me</span></a></strong>
+                </p>
+            </div>
+        </div>
+        <div class=col-md-9>
+        <div class="card " id="skills-Bar">
+           
+            <div class="card-header"><div id="hhh" style='Text-align:center'>More About Myself</div></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 card-container">
+                        <div class="card-flip">
+                            <div class="card front">
+                                <img src="hobbies.jpg" height="300px">
+                                
+                            </div>
+                            <div class=" card back">
+                                <div class='card-header ' id="sc-1">Hobbies</div>
+                                <ul id="list-title">
+                                    <li id="list-item">Reading Fiction</li>
+                                    <li id="list-item">Card-Magic</li>
+                                    <li id="list-item">Trekking</li>
+                                    <li id="list-item">Solving Puzzles</li>
+                                    
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 card-container">
+                        <div class="card-flip">
+                            <div class="card front">
+                                <img src="skills.jpg" height="300px">
+                            </div>
+                            <div class=" card back">
+                                <div class='card-header' id='sc-1'>Skills</div>
+                                <ul id="list-title">
+                                    <li id="list-item">Python Programming</li>
+                                    <li id="list-item">HTML and CSS</li>
+                                    <li id="list-item">Event Organizing and Management</li>
+                                    <li id="list-item">Javascript</li>
+                                    <li id="list-item">Node.JS</li>
+                                    <li id="list-item">Game Developement</li>
+                                    <li id="list-item">ML Supervised Learning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 card-container">
+                        <div class="card-flip">
+                            <div class="card front">
+                                
+                                <img src="courses.jpg" height="300px">
+                                
+                            </div>
+                            <div class=" card back">
+                                <div class='card-header' id="sc-1">Courses</div>
+                                <ul>
+                                    <li id="list-item"><a href="https://www.udemy.com/share/101WqkAEEdeVhXRnoD/">Javascript</a>(Completed)</li>
+                                    <li id="list-item"><a href="https://www.udemy.com/share/101WciAEEdeVhXRnoD/">Machine Learnig</a>(Ongoing)</li>
+                                    <li id="list-item"><a href="https://www.udemy.com/share/101WGiAEEdeVhXRnoD/">Node.JS</a>(Ongoing)</li>                
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 card-container">
+                        <div class="card-flip">
+                            <div class="card front">
+                                
+                                <img src="projects.jpg" height="300px">
+                            </div>
+                            <div class=" card back">
+                                <div class='card-header' id='sc-1'>My Projects</div>
+                                <ul>
+                                    <li id="list-item"><a href="https://github.com/soulsayer9029/javascript_project_githubProfileFinder">Github Finder|Find Profiles and repositories of Github Username</a></li>
+                                    <li id="list-item"><a href="https://github.com/soulsayer9029/calTrack">CalTrack|Calorie Tracking App</a></li>
+                                    <li id="list-item"><a href="#">Project-3</a></li>
+                                    <li id="list-item"><a href="#">Project-3</a></li>
+                                </ul>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+           
+    
+</body>
+</html>
